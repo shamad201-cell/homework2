@@ -13,7 +13,7 @@ slider.oninput = function() {
 };
 
 function validateFirstName() { 
-  FirstName = document.getElementById("firstName").value.trim();
+  firstName = document.getElementById("firstName").value.trim();
   var namePattern = /^[A-Za-z'-]+$/;
   if (firstName === "") {
     document.getElementById("firstNameError").innerHTML = "First name is required.";
