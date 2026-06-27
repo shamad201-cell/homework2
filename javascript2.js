@@ -14,18 +14,18 @@ slider.oninput = function() {
 
 function validateFirstName() { 
   FirstName = document.getElementById("firstName").value.trim();
-  var namePattern = /^[A-Za-z]+$/;
-  if (FirstName === "") {
+  var namePattern = /^[A-Za-z'-]+$/;
+  if (firstName === "") {
     document.getElementById("firstNameError").innerHTML = "First name is required.";
     return false;
-  } else if (FirstName != "") {
+  } else if (firstName != "") {
 if (!firstName.match(namePattern)) {
       document.getElementById("firstNameError").innerHTML = "Letters, apostrophes, and dashes only.";
       return false;
-    } else if (FirstName.length < 2) {
+    } else if (firstName.length < 2) {
       document.getElementById("firstNameError").innerHTML = "First name must be at least 2 characters long.";
     return false;
-  } else if (FirstName.length > 30) {
+  } else if (firstName.length > 30) {
     document.getElementById("firstNameError").innerHTML = "first name must be less than 30 characters long.";
     return false;
   } else {
